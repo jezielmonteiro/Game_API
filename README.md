@@ -8,4 +8,4 @@
 
 <h2>📚 Sobre o Projeto</h2>
 
-<p>Este projeto foi criado como parte da disciplina <strong>Laboratório de Desenvolvimento de Aplicativos Nativos</strong>.</p>
+<p>Este projeto foi criado como parte da disciplina <strong>Laboratório de Desenvolvimento de Aplicativos Nativos</strong></p>
