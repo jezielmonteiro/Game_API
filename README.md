@@ -1,6 +1,6 @@
 <header style="text-align:center; margin-bottom:20px;">
 
-  <h1>Game API</h1>
+  <h1> 👾 Game API</h1>
 
   <p>API RESTful para gerenciamento de jogos, desenvolvida com Java e Spring Boot</p>
 
