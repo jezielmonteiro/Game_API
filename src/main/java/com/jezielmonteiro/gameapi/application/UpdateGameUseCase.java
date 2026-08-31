@@ -19,11 +19,13 @@ public class UpdateGameUseCase {
     public GameOutput execute(GameId id, UpdateGameInput input) {
         var game = repository.findById(id)
                 .orElseThrow(() -> new GameNotFoundException(id));
+
         game.update(
                 input.title(),
                 input.developer(),
                 input.releaseYear()
         );
+
         var updated = repository.save(game);
         return GameOutput.from(updated);
     }
