@@ -5,6 +5,7 @@ import com.jezielmonteiro.gameapi.domain.Game;
 public record GameOutput(
         String id,
         String title,
+        String genre,
         String developer,
         Integer releaseYear
 ) {
@@ -12,6 +13,7 @@ public record GameOutput(
         return new GameOutput(
                 game.getId().id().toString(),
                 game.getTitle(),
+                game.getGenre(),
                 game.getDeveloper(),
                 game.getReleaseYear()
         );

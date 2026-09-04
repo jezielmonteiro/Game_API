@@ -4,6 +4,7 @@ import com.jezielmonteiro.gameapi.application.output.GameOutput;
 
 public record GameResponse(
         String id,
+        String genre,
         String title,
         String developer,
         Integer releaseYear
@@ -12,6 +13,7 @@ public record GameResponse(
         return new GameResponse(
                 output.id(),
                 output.title(),
+                output.genre(),
                 output.developer(),
                 output.releaseYear()
         );

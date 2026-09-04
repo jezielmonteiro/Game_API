@@ -8,13 +8,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class DeleteGameUseCase {
     private final GameRepository repository;
+
     public DeleteGameUseCase(GameRepository repository) {
         this.repository = repository;
     }
-    public void execute(GameId id) {
-        if (repository.findById(id).isEmpty()) {
-            throw new GameNotFoundException(id);
+
+    public void execute(GameId gameId) {
+        if (repository.findById(gameId).isEmpty()) {
+            throw new GameNotFoundException(gameId);
         }
-        repository.delete(id);
+        repository.delete(gameId);
     }
 }

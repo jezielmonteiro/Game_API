@@ -13,6 +13,10 @@ public record UpdateGameRequest(
     @Size(min = 3, max = 150)
     String title,
 
+    @NotBlank(message = "O gênero é obrigatório")
+    @Size(min = 5, max = 50)
+    String genre,
+
     @NotBlank(message = "O nome do estúdio desenvolvedor é obrigatório")
     @Size(min = 3, max = 100)
     String developer,
@@ -29,6 +33,6 @@ public record UpdateGameRequest(
         }
 
     public UpdateGameInput toInput() {
-        return new UpdateGameInput(title, developer, releaseYear);
+        return new UpdateGameInput(title, genre, developer, releaseYear);
     }
 }

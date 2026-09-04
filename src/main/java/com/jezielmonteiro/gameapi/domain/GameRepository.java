@@ -7,9 +7,9 @@ public interface GameRepository {
 
     Game save(Game game);
 
-    List findAll();
+    List<Game> findAll();
 
-    Optional findById(GameId id);
+    Optional<Game> findById(GameId id);
 
     void delete(GameId id);
 }

@@ -15,6 +15,7 @@ public class CreateGameUseCase {
     public GameOutput execute(CreateGameInput input) {
         var game = new Game(
                 input.title(),
+                input.genre(),
                 input.developer(),
                 input.releaseYear()
         );

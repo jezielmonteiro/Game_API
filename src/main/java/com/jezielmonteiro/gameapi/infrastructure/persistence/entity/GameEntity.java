@@ -16,16 +16,24 @@ import java.util.UUID;
 public class GameEntity {
     @Id
     private UUID id;
+
     @Column(nullable = false, length = 150)
     private String title;
+
+    @Column(nullable = false, length = 50)
+    private String genre;
+
     @Column(nullable = false, length = 100)
     private String developer;
+
     @Column(nullable = false)
     private Integer releaseYear;
-    public GameEntity(UUID id, String title, String developer,
+
+    public GameEntity(UUID id, String title, String genre, String developer,
                       Integer releaseYear) {
         this.id = id;
         this.title = title;
+        this.genre = genre;
         this.developer = developer;
         this.releaseYear = releaseYear;
     }

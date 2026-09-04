@@ -9,10 +9,17 @@ public record CreateGameRequest(
         @Size(min = 3, max = 150,
                 message = "O título deve possuir entre 3 e 150 caracteres")
         String title,
+
+        @NotBlank(message = "O gênero é obrigatório")
+        @Size(min = 5, max = 50,
+                message = "O gênero deve possuir entre 5 e 50 caracteres")
+        String genre,
+
         @NotBlank(message = "O nome do estúdio desenvolvedor é obrigatório")
         @Size(min = 3, max = 100,
                 message = "O nome do estúdio desenvolvedor deve possuir entre 3 e 100 caracteres")
         String developer,
+
         @NotNull(message = "O ano de lançamento é obrigatório")
         @Positive(message = "O ano de lançamento deve ser positivo")
         Integer releaseYear
@@ -24,6 +31,6 @@ public record CreateGameRequest(
                 || releaseYear <= Year.now().getValue();
     }
     public CreateGameInput toInput() {
-        return new CreateGameInput(title, developer, releaseYear);
+        return new CreateGameInput(title, genre, developer, releaseYear);
     }
 }
