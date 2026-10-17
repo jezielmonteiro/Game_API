@@ -48,6 +48,6 @@ Uma API RESTful desenvolvida em Java com Spring Boot para o gerenciamento de um 
 {
   "title": "Minecraft Dungeons",
   "genre": "Action RPG",
-  "platform": "PC / Console",
+  "developer": "Mojang Studios",
   "releaseYear": 2020
 }
